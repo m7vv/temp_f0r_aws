@@ -24,4 +24,4 @@ jobs:
           aws-region: ${{ vars.AWS_REGION || 'us-east-1' }}
 
       - name: Upload files to S3
-        run: aws s3 sync site/ s3://cmtr-e1814a1b-bucket-1793110605 --exclude '.git/*' --exclude '.github/*'
+        run: aws s3 sync . s3://cmtr-e1814a1b-bucket-1793110605 --exclude '.git/*' --exclude '.github/*'
